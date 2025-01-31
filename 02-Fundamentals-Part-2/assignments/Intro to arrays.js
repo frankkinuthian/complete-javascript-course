@@ -58,3 +58,50 @@ const populationData = [
 ];
 
 console.log(populationData);
+
+
+// new test
+const calcAge = function (birthYear) {
+  return 2025 - birthYear;
+}
+
+// Array of birth years
+const birthYears = [1990, 1991, 1992, 1993];
+
+// calculate the ages
+const ages = birthYears.map(calcAge);
+
+// Let me explain the line `const ages = birthYears.map(calcAge);`:
+
+// This line uses the `map()` array method, which is a very powerful and commonly used JavaScript feature. Here's how it works:
+
+// 1. `map()` is a method that creates a new array by applying a function to every element of an existing array
+// 2. In this case:
+//    - `birthYears` is the source array `[1990, 1991, 1992, 1993]`
+//    - `calcAge` is the function being applied to each element (which subtracts each year from 2025)
+
+// So what happens step by step:
+// 1. `map()` takes each year from `birthYears`
+// 2. Passes it to `calcAge`
+// 3. `calcAge` calculates `2025 - birthYear` for each value
+// 4. The results are collected into a new array
+
+// The final result stored in `ages` would be:
+// ```javascript
+// [35, 34, 33, 32]
+// ```
+
+// This is equivalent to writing:
+// ```javascript
+// const ages = [
+//     calcAge(1990), // 35
+//     calcAge(1991), // 34
+//     calcAge(1992), // 33
+//     calcAge(1993)  // 32
+// ];
+// ```
+
+// `map()` is much more concise and is considered more modern/functional programming style compared to using a traditional for loop. It's especially useful when you want to transform each element in an array in the same way.
+
+
+console.log(ages);
